@@ -22,3 +22,11 @@
 
 O git possuí 4 estágios para os arquivos: Não rastreado, Não Modificado, Modificado e "Staged".
 Como o arquivo foi adicionado recentemente ele não é rastreado pelo git (o git não irá monitorar suas modificações), para resolver o problema é necessário adicionar os arquivos ao git. Para isso, usasse o `git add (filename)` No caso do José, pode ser `git add README` e `git add Product.js` ou `git add .` Importante lembrar que o `git add` serve para adicionar arquivos novos, bem como adicionar arquivos modificados para o "Staged". 
+
+
+### 3- O time de desenvolvimento analisou e descobriu que o projeto está gerando arquivos pesados e desnecessários para serem commitados no repositório git. Em qual arquivo você deve incluir a lista de extensões para que esses arquivos descenssários sejam desconsiderados?
+
+O arquivo para que seja feito a exclusão é no `gitignore`. Vale observar que o gitignore não possui extensão (`txt`, `.pdf`)
+
+Dentro do arquivo `gitignore` basta adicionar: `*.js` Nesse exemplo todos os arquivos `.js` serão ignorados: `*.(extensão)`. Ou `ignora/` Todos os arquivos dentro da pasta `ignora` serão ignorados. Existe outros métodos para ignorar arquivos como listado aqui: [Lista de .gitignore](https://www.atlassian.com/br/git/tutorials/saving-changes/gitignore#:~:text=Caso%20queira%20ignorar%20um%20arquivo,forma%20de%20um%20arquivo%20ignorado.)
+
