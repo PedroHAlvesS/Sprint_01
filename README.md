@@ -26,7 +26,9 @@ Como o arquivo foi adicionado recentemente ele não é rastreado pelo git (o git
 
 ### 3- O time de desenvolvimento analisou e descobriu que o projeto está gerando arquivos pesados e desnecessários para serem commitados no repositório git. Em qual arquivo você deve incluir a lista de extensões para que esses arquivos descenssários sejam desconsiderados?
 
-O arquivo para que seja feito a exclusão é no `gitignore`. Vale observar que o gitignore não possui extensão (`txt`, `.pdf`)
+O arquivo para que seja feito a exclusão é no `gitignore`. Vale observar que o gitignore não possui extensão (`.txt`, `.pdf`)
 
-Dentro do arquivo `gitignore` basta adicionar: `*.js` Nesse exemplo todos os arquivos `.js` serão ignorados: `*.(extensão)`. Ou `ignora/` Todos os arquivos dentro da pasta `ignora` serão ignorados. Existe outros métodos para ignorar arquivos como listado aqui: [Lista de .gitignore](https://www.atlassian.com/br/git/tutorials/saving-changes/gitignore#:~:text=Caso%20queira%20ignorar%20um%20arquivo,forma%20de%20um%20arquivo%20ignorado.)
+Dentro do arquivo `gitignore` basta adicionar: `*.js` Nesse exemplo todos os arquivos `.js` serão ignorados: `*.(extensão)`. Ou `ignora/` Todos os arquivos dentro da pasta `ignora` serão ignorados. Existe outros métodos para ignorar arquivos como listado aqui: <a href="https://www.atlassian.com/br/git/tutorials/saving-changes/gitignore#:~:text=Caso%20queira%20ignorar%20um%20arquivo,forma%20de%20um%20arquivo%20ignorado." target="_blank" rel="external">Lista do .gitignore</a>
+
+
 
