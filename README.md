@@ -20,5 +20,5 @@
 
 :point_down:
 
-O git possuí 4 estágios para os arquivos: Não rastreado, , Não Modificado, Modificado e "Staged".
+O git possuí 4 estágios para os arquivos: Não rastreado, Não Modificado, Modificado e "Staged".
 Como o arquivo foi adicionado recentemente ele não é rastreado pelo git (o git não irá monitorar suas modificações), para resolver o problema é necessário adicionar os arquivos ao git. Para isso, usasse o `git add (filename)` No caso do José, pode ser `git add README` e `git add Product.js` ou `git add .` Importante lembrar que o `git add` serve para adicionar arquivos novos, bem como adicionar arquivos modificados para o "Staged". 
