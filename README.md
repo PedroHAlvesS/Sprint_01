@@ -9,8 +9,11 @@
 4. Retrospectiva;
 
 Daily: 15 minutos no máximo.
+
 Planning: Tempo máximo de 8 horas para uma sprint de 1 mês, para sprints menor esse tempo tende a ser menor.
+
 Review: Tempo máximo de 4 horas para uma sprint de 1 mês, para sprints de prazo menor esse tempo geralmente é menor também.
+
 Retrospectiva: Tempo máximo de 3 horas para uma sprint de 1 mês, para sprints de prazo menor esse tempo é usualmente menor.
 
 
