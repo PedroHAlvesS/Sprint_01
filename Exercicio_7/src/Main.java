@@ -1,5 +1,7 @@
+import Domain.Mensagem;
 import Domain.Usuario;
 
+import java.time.LocalTime;
 import java.util.Scanner;
 
 public class Main {
@@ -24,7 +26,9 @@ public class Main {
                 System.out.println("Usuário ou senha incorretos!");
             }
         }
-        System.out.println("logado com sucesso!");
-        
+        LocalTime horaQueLogou = LocalTime.now();
+
+        System.out.println(Mensagem.mandaMensagemBoasVindas(horaQueLogou));
+
     }
 }
