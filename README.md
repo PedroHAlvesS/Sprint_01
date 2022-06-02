@@ -8,10 +8,10 @@
 3. Review;
 4. Retrospectiva;
 
-1. 15 minutos no máximo.
-2. Tempo máximo de 8 horas para uma sprint de 1 mês, para sprints menor esse tempo tende a ser menor.
-3. Tempo máximo de 4 horas para uma sprint de 1 mês, para sprints de prazo menor esse tempo geralmente é menor também.
-4. Tempo máximo de 3 horas para uma sprint de 1 mês, para sprints de prazo menor esse tempo é usualmente menor.
+Daily: 15 minutos no máximo.
+Planning: Tempo máximo de 8 horas para uma sprint de 1 mês, para sprints menor esse tempo tende a ser menor.
+Review: Tempo máximo de 4 horas para uma sprint de 1 mês, para sprints de prazo menor esse tempo geralmente é menor também.
+Retrospectiva: Tempo máximo de 3 horas para uma sprint de 1 mês, para sprints de prazo menor esse tempo é usualmente menor.
 
 
 ### 2- José iniciou sua jornada recentemente com o git e não está conseguindo publicar seu arquivo README e a classe Product.js que acabou de criar. O erro do git da a seguinte informação: `Untracked Files`. Por que esse erro ocorreu e como resolver.
