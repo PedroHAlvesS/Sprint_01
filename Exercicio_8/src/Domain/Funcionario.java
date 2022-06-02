@@ -4,6 +4,7 @@ public class Funcionario {
     private String nome;
     private double salario;
     private double salarioLiquido;
+    private double bonus;
 
     public Funcionario(String nome, double salario) {
         this.nome = nome;
@@ -11,6 +12,7 @@ public class Funcionario {
     }
 
     public void adicionarBonus(double bonus) {
+        this.bonus = bonus;
         this.salarioLiquido = this.salario + bonus;
     }
 
@@ -20,5 +22,13 @@ public class Funcionario {
 
     public double getSalario() {
         return salario;
+    }
+
+    public double getSalarioLiquido() {
+        return salarioLiquido;
+    }
+
+    public double getBonus() {
+        return bonus;
     }
 }

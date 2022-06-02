@@ -1,3 +1,4 @@
+import Componente.Relatorio;
 import Domain.Funcionario;
 import Service.Bonificao;
 
@@ -11,6 +12,7 @@ public class Main {
 
         Funcionario[] funcionarios = new Funcionario[quantidadeDeFuncionarios];
 
+        // lendo funcionário
         for (int i = 0; i < funcionarios.length; i++) {
             System.out.println("Informe o nome do funcionário: ");
             String nomeTemp = teclado.nextLine();
@@ -18,9 +20,14 @@ public class Main {
             double salarioTemp = Double.parseDouble(teclado.nextLine());
             funcionarios[i] = new Funcionario(nomeTemp, salarioTemp);
         }
+        // calculando a bonificação dos funcionários
         for (int i = 0; i < funcionarios.length; i++) {
             double bonus = Bonificao.calculaBonificao(funcionarios[i].getSalario());
             funcionarios[i].adicionarBonus(bonus);
+        }
+        // imprimindo o relatório dos funcionários
+        for (int i = 0; i < funcionarios.length; i++) {
+            Relatorio.imprimiRelatorioDoSalarioDoFuncionario(funcionarios[i]);
         }
     }
 }
