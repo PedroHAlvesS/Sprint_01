@@ -36,3 +36,7 @@ Dentro do arquivo `gitignore` basta adicionar: `*.js` Nesse exemplo todos os arq
 A vantagem de se utilizar o Scrum é a constante melhoria do projeto em etapas. O modelo em cascata por exemplo, o projeto é finalizado para se ter um primeiro resultado e pode ser que o cliente não goste do resultado, sendo necessário refazer as etapas gerando custos e perda de tempo. O Scrum contempla mudanças ao longo do projeto gerando o resultado esperado.
 
 
+### 5- José foi promovido de seu cargo anterior e se tornou o novo Product Owner do time, quais são suas responsabilidades como PO ?
+
+O Product Owner é a pessoa que irá definir os product backlog, as funcionalidades, bem como ordenar em prioridade as funcionalidades. Para isso é muito importante que o Product Owner tenha uma visão clara do produto. 
+O Product Owner também valida os resultados obtidos pela sprint.
