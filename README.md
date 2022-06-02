@@ -36,3 +36,8 @@ A vantagem de se utilizar o Scrum é a constante melhoria do projeto em etapas. 
 
 O Product Owner é a pessoa que irá definir os product backlog, as funcionalidades, bem como ordenar em prioridade as funcionalidades. Para isso é muito importante que o Product Owner tenha uma visão clara do produto. 
 O Product Owner também valida os resultados obtidos pela sprint.
+
+
+### 6:
+
+Na questão 6, para adicionar as perguntas é necessário coloca-lás no arquivo: "perguntas.txt" dentro da pasta: Exercicio_6/src
