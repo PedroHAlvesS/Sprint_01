@@ -1,5 +1,7 @@
 import Domain.Usuario;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class Main {
@@ -25,6 +27,9 @@ public class Main {
             }
         }
         System.out.println("logado com sucesso!");
-        
+
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm");
+        System.out.println(dtf.format(LocalDateTime.now()));
+
     }
 }
