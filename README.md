@@ -31,4 +31,8 @@ O arquivo para que seja feito a exclusão é no `gitignore`. Vale observar que o
 Dentro do arquivo `gitignore` basta adicionar: `*.js` Nesse exemplo todos os arquivos `.js` serão ignorados: `*.(extensão)`. Ou `ignora/` Todos os arquivos dentro da pasta `ignora` serão ignorados. Existe outros métodos para ignorar arquivos como listado aqui: <a href="https://www.atlassian.com/br/git/tutorials/saving-changes/gitignore#:~:text=Caso%20queira%20ignorar%20um%20arquivo,forma%20de%20um%20arquivo%20ignorado." target="_blank" rel="external">Lista do .gitignore</a>
 
 
+### 4- Com suas palavras, descreva as vantagens de utilizar o Scrum no seu projeto.
+
+A vantagem de se utilizar o Scrum é a constante melhoria do projeto em etapas. O modelo em cascata por exemplo, o projeto é finalizado para se ter um primeiro resultado e pode ser que o cliente não goste do resultado, sendo necessário refazer as etapas gerando custos e perda de tempo. O Scrum contempla mudanças ao longo do projeto gerando o resultado esperado.
+
 
