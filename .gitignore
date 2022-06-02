@@ -25,4 +25,4 @@ replay_pid*
 
 #/shelf/
 #/workspace.xml
-.idea/
+#.idea/
