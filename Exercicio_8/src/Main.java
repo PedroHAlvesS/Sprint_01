@@ -1,4 +1,5 @@
 import Domain.Funcionario;
+import Service.Bonificao;
 
 import java.util.Scanner;
 
@@ -18,8 +19,8 @@ public class Main {
             funcionarios[i] = new Funcionario(nomeTemp, salarioTemp);
         }
         for (int i = 0; i < funcionarios.length; i++) {
-            System.out.println(funcionarios[i].getNome());
-            System.out.println(funcionarios[i].getSalario());
+            double bonus = Bonificao.calculaBonificao(funcionarios[i].getSalario());
+            funcionarios[i].adicionarBonus(bonus);
         }
     }
 }
