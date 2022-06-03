@@ -1,4 +1,4 @@
-import Domain.Mensagem;
+import Componentes.Mensagem;
 import Domain.Usuario;
 
 import java.time.LocalTime;
@@ -23,6 +23,10 @@ public class Main {
                 }
             }
             if (naoEstaLogado) {
+                // loop para limpar console
+                for (int i = 0; i < 120; i++) {
+                    System.out.println("");
+                }
                 System.out.println("Usuário ou senha incorretos!");
             }
         }
