@@ -1,11 +1,13 @@
+import Componentes.LerUsuarioNoArquivo;
 import Componentes.Mensagem;
 import Domain.Usuario;
 
+import java.io.IOException;
 import java.time.LocalTime;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Scanner teclado = new Scanner(System.in);
         Usuario[] usuarios = new Usuario[2];
         usuarios[0] = new Usuario("teste", "123");
@@ -31,8 +33,9 @@ public class Main {
             }
         }
         LocalTime horaQueLogou = LocalTime.now();
-
         System.out.println(Mensagem.mandaMensagemBoasVindas(horaQueLogou));
+
+        LerUsuarioNoArquivo.leUsuariosNoArquivoTxt();
 
     }
 }
