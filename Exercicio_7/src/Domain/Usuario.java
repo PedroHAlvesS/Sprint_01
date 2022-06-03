@@ -11,7 +11,11 @@ public class Usuario {
         this.password = password;
     }
 
-    public boolean confereAutenticacao(String login, String password) {
-        return Objects.equals(this.login, login) && Objects.equals(this.password, password);
+    public String getLogin() {
+        return login;
+    }
+
+    public String getPassword() {
+        return password;
     }
 }

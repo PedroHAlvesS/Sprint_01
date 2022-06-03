@@ -6,6 +6,7 @@ import Domain.Usuario;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Autenticacao {
@@ -30,13 +31,17 @@ public class Autenticacao {
         System.out.println("Informe a senha: ");
         String password = Autenticacao.teclado.nextLine();
         for (int i = 0; i < Autenticacao.usuarios.size(); i++) {
-            if (Autenticacao.usuarios.get(i).confereAutenticacao(login, password)) {
+            if (Autenticacao.validarLogin(login, password, i)) {
                 return false;
             }
         }
         Mensagem.limparTela();
         System.out.println("Usuário ou senha incorretos!");
         return true;
+    }
+    private static boolean validarLogin(String login, String password, int i) {
+        return Objects.equals(Autenticacao.usuarios.get(i).getLogin(), login) &&
+                Objects.equals(Autenticacao.usuarios.get(i).getPassword(), password);
     }
 
 }

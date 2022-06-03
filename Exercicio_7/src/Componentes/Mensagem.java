@@ -3,39 +3,39 @@ package Componentes;
 import java.time.LocalTime;
 
 public class Mensagem {
-    public static LocalTime horasManha6 = LocalTime.of(6, 0, 0);
-    public static LocalTime horasTarde12 = LocalTime.of(12, 0, 0);
-    public static LocalTime horasNoite18 = LocalTime.of(18,0, 0);
+    private static LocalTime horasManha6 = LocalTime.of(6, 0, 0);
+    private static LocalTime horasTarde12 = LocalTime.of(12, 0, 0);
+    private static LocalTime horasNoite18 = LocalTime.of(18,0, 0);
 
     public static String mandaMensagemBoasVindas(LocalTime horaQueLogou) {
-        if (horaQueLogou.isAfter(horasManha6.minusNanos(1)) && horaQueLogou.isBefore(horasTarde12.plusNanos(1))) {
+        if (Mensagem.logouPelaManha(horaQueLogou)) {
             return Mensagem.mensagemBomDia();
         }
-        if (horaQueLogou.isAfter(horasTarde12) && horaQueLogou.isBefore(horasNoite18.plusNanos(1))) {
+        if (Mensagem.logouPelaTarde(horaQueLogou)) {
             return Mensagem.mensagemBoaTarde();
         }
-        if (horaQueLogou.isAfter(horasNoite18)) {
+        if (Mensagem.logouPelaNoite(horaQueLogou)) {
             return Mensagem.mensagemBoaNoite();
         }
-        if (horaQueLogou.isBefore(horasManha6)) {
+        if (Mensagem.logouPelaMadrugada(horaQueLogou)) {
             return Mensagem.mensagemBoaMadrugada();
         }
         return "Bom dia,";
     }
 
-    public static String mensagemBomDia() {
+    private static String mensagemBomDia() {
         return "Bom dia, você se logou ao nosso sistema";
     }
 
-    public static String mensagemBoaTarde() {
+    private static String mensagemBoaTarde() {
         return "Boa tarde, você se logou ao nosso sistema";
     }
 
-    public static String mensagemBoaNoite() {
+    private static String mensagemBoaNoite() {
         return "Boa noite, você se logou ao nosso sistema";
     }
 
-    public static String mensagemBoaMadrugada() {
+    private static String mensagemBoaMadrugada() {
         return "Boa madrugada, você se logou ao nosso sistema";
     }
 
@@ -43,5 +43,21 @@ public class Mensagem {
         for (int i = 0; i < 120; i++) {
             System.out.println("");
         }
+    }
+
+    private static boolean logouPelaManha(LocalTime horaQueLogou) {
+        return (horaQueLogou.isAfter(horasManha6) && horaQueLogou.isBefore(horasTarde12) || horaQueLogou.equals(horasManha6));
+    }
+
+    private static boolean logouPelaTarde(LocalTime horaQueLogou) {
+        return (horaQueLogou.isAfter(horasTarde12) && horaQueLogou.isBefore(horasNoite18) || horaQueLogou.equals(horasTarde12));
+    }
+
+    private static boolean logouPelaNoite(LocalTime horaQueLogou) {
+        return (horaQueLogou.isAfter(horasNoite18) || horaQueLogou.equals(horasNoite18));
+    }
+
+    private static boolean logouPelaMadrugada(LocalTime horaQueLogou) {
+        return horaQueLogou.isBefore(horasManha6);
     }
 }
