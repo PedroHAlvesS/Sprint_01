@@ -38,4 +38,10 @@ public class Mensagem {
     public static String mensagemBoaMadrugada() {
         return "Boa madrugada, você se logou ao nosso sistema";
     }
+
+    public static void limparTela() {
+        for (int i = 0; i < 120; i++) {
+            System.out.println("");
+        }
+    }
 }
