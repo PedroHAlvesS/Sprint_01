@@ -1,3 +1,4 @@
+import Componentes.LerArquivoComPerguntas;
 import Domain.Perguntas;
 import Domain.Usuario;
 
@@ -11,7 +12,7 @@ public class Main {
         System.out.println("Olá está pronto para um quiz ?");
         Usuario usuario = new Usuario();
         usuario.criarUsuario();
-        ArrayList<Perguntas> perguntas = Perguntas.lerPerguntasNoTxt();
+        ArrayList<Perguntas> perguntas = LerArquivoComPerguntas.lerPerguntasNoTxt();
         for (Perguntas perguntaTemp : perguntas) {
             perguntaTemp.lerPergunta();
             System.out.println("Sr(a) " + usuario.getNome() + " informe o número da resposta que você acha correta: ");
