@@ -11,8 +11,6 @@ public class Main {
     public static void main(String[] args) throws IOException {
         Scanner teclado = new Scanner(System.in);
         ArrayList<Usuario> usuarios = LerUsuarioNoArquivo.leUsuariosNoArquivoTxt();
-        System.out.println(usuarios.get(0));
-
 
         boolean naoEstaLogado = true;
         while (naoEstaLogado) {
@@ -20,9 +18,10 @@ public class Main {
             String login = teclado.nextLine();
             System.out.println("Informe a senha: ");
             String password = teclado.nextLine();
-            for (Usuario usuario : usuarios) {
-                if (usuario.confereAutenticacao(login, password)) {
+            for (int i = 0; i < usuarios.size(); i++) {
+                if (usuarios.get(i).confereAutenticacao(login, password)) {
                     naoEstaLogado = false;
+                    break;
                 }
             }
             if (naoEstaLogado) {
@@ -36,7 +35,6 @@ public class Main {
         LocalTime horaQueLogou = LocalTime.now();
         System.out.println(Mensagem.mandaMensagemBoasVindas(horaQueLogou));
 
-        LerUsuarioNoArquivo.leUsuariosNoArquivoTxt();
 
     }
 }

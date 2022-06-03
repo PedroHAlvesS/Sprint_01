@@ -25,14 +25,11 @@ public class LerUsuarioNoArquivo {
             if (linha.charAt(0) == '-') {
                 continue;
             }
-            if (contadorDeLinhas == 2) {
+            if (contadorDeLinhas == 1) {
+                senhaNoArquivoTemp = linha;
                 contadorDeLinhas = 0;
                 Usuario usuarioTemp = new Usuario(usuarioNoArquivoTemp, senhaNoArquivoTemp);
                 usuariosLista.add(usuarioTemp);
-            }
-            if (contadorDeLinhas == 1) {
-                senhaNoArquivoTemp = linha;
-                contadorDeLinhas++;
             }
             if (contadorDeLinhas == 0) {
                 usuarioNoArquivoTemp = linha;
