@@ -26,11 +26,11 @@ public class Autenticacao {
     public static boolean naoLogadoNoSistema() {
         Autenticacao.preencherVetor();
         System.out.println("Informe o usuário:");
-        String login = teclado.nextLine();
+        String login = Autenticacao.teclado.nextLine();
         System.out.println("Informe a senha: ");
-        String password = teclado.nextLine();
-        for (int i = 0; i < usuarios.size(); i++) {
-            if (usuarios.get(i).confereAutenticacao(login, password)) {
+        String password = Autenticacao.teclado.nextLine();
+        for (int i = 0; i < Autenticacao.usuarios.size(); i++) {
+            if (Autenticacao.usuarios.get(i).confereAutenticacao(login, password)) {
                 return false;
             }
         }
