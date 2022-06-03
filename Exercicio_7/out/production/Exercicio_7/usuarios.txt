@@ -1,3 +1,7 @@
+// A barra serve para comentar
+/ - < essa linha serve para separar os usuários
+/ conforme os exemplos abaixo:
+-
 Joao
 123
 -
@@ -6,3 +10,4 @@ Ana
 -
 Pedro
 123
+-

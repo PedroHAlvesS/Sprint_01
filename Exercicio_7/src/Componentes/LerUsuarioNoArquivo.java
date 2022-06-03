@@ -9,16 +9,38 @@ import java.util.ArrayList;
 
 public class LerUsuarioNoArquivo {
 
-    //public static ArrayList<Usuario> leUsuariosNoArquivoTxt() throws IOException {
-    public static void leUsuariosNoArquivoTxt() throws IOException {
+    public static ArrayList<Usuario> leUsuariosNoArquivoTxt() throws IOException {
         ArrayList<Usuario> usuariosLista = new ArrayList<Usuario>();
         FileReader arquivo = new FileReader("src/usuarios.txt");
         BufferedReader leitor = new BufferedReader(arquivo);
         int contadorDeLinhas = 0;
+        String usuarioNoArquivoTemp = "";
+        String senhaNoArquivoTemp = "";
 
         while (leitor.ready()) {
-            System.out.println(leitor.readLine());
+            String linha = leitor.readLine();
+            if (linha.charAt(0) == '/') {
+                continue;
+            }
+            if (linha.charAt(0) == '-') {
+                continue;
+            }
+            if (contadorDeLinhas == 2) {
+                contadorDeLinhas = 0;
+                Usuario usuarioTemp = new Usuario(usuarioNoArquivoTemp, senhaNoArquivoTemp);
+                usuariosLista.add(usuarioTemp);
+            }
+            if (contadorDeLinhas == 1) {
+                senhaNoArquivoTemp = linha;
+                contadorDeLinhas++;
+            }
+            if (contadorDeLinhas == 0) {
+                usuarioNoArquivoTemp = linha;
+                contadorDeLinhas++;
+            }
         }
+
+        return usuariosLista;
 
     }
 

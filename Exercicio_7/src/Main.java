@@ -4,14 +4,15 @@ import Domain.Usuario;
 
 import java.io.IOException;
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws IOException {
         Scanner teclado = new Scanner(System.in);
-        Usuario[] usuarios = new Usuario[2];
-        usuarios[0] = new Usuario("teste", "123");
-        usuarios[1] = new Usuario("teste5", "123");
+        ArrayList<Usuario> usuarios = LerUsuarioNoArquivo.leUsuariosNoArquivoTxt();
+        System.out.println(usuarios.get(0));
+
 
         boolean naoEstaLogado = true;
         while (naoEstaLogado) {
