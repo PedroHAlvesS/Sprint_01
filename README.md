@@ -44,3 +44,6 @@ O Product Owner também valida os resultados obtidos pela sprint.
 ### 6:
 
 Na questão 6, para adicionar as perguntas é necessário coloca-lás no arquivo: "perguntas.txt" dentro da pasta: Exercicio_6/src
+
+### 7:
+Na questão 7, para adicionar usuários é necessário coloca-lós no arquivo: "usuarios.txt" dentro da pasta: Exercicio_7/src
