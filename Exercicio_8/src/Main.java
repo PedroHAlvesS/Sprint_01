@@ -9,25 +9,15 @@ public class Main {
         Scanner teclado = new Scanner(System.in);
         System.out.println("Informe a quantidade de funcionários");
         int quantidadeDeFuncionarios = Integer.parseInt(teclado.nextLine());
-
-        Funcionario[] funcionarios = new Funcionario[quantidadeDeFuncionarios];
-
-        // lendo funcionário
-        for (int i = 0; i < funcionarios.length; i++) {
-            System.out.println("Informe o nome do funcionário: ");
-            String nomeTemp = teclado.nextLine();
-            System.out.println("Informe o salario do funcionário: ");
-            double salarioTemp = Double.parseDouble(teclado.nextLine());
-            funcionarios[i] = new Funcionario(nomeTemp, salarioTemp);
-        }
+        // adiciona os funcionários ao vetor
+        Funcionario[] funcionarios = Funcionario.adicionarFuncionariosAoSistema(quantidadeDeFuncionarios);
         // calculando a bonificação dos funcionários
         for (int i = 0; i < funcionarios.length; i++) {
-            double bonus = Bonificao.calculaBonificao(funcionarios[i].getSalario());
-            funcionarios[i].adicionarBonus(bonus);
+            Bonificao.inseriBonificaoAoFuncionario(funcionarios[i]);
         }
         // imprimindo o relatório dos funcionários
         for (int i = 0; i < funcionarios.length; i++) {
-            Relatorio.imprimiRelatorioDoSalarioDoFuncionario(funcionarios[i]);
+            Relatorio.imprimiRelatorioDeUmFuncionario(funcionarios[i]);
         }
     }
 }

@@ -4,7 +4,7 @@ import Domain.Funcionario;
 
 public class Bonificao {
 
-    public static double calculaBonificao(double salarioFuncionario) {
+    private static double calculaBonificao(double salarioFuncionario) {
         double bonus = 0;
         if (salarioFuncionario <= 1000.0) {
             bonus = salarioFuncionario * 0.2;
@@ -16,6 +16,12 @@ public class Bonificao {
             bonus = salarioFuncionario * 0.1 * -1;
         }
         return bonus;
+    }
+
+    public static void inseriBonificaoAoFuncionario(Funcionario funcionario) {
+        double bonus = Bonificao.calculaBonificao(funcionario.getSalario());
+        funcionario.adicionarBonus(bonus);
+
     }
 
 }
