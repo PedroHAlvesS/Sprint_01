@@ -1,5 +1,8 @@
 package Domain;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Perguntas {
     private String pergunta;
     private String resposta1;
@@ -22,7 +25,7 @@ public class Perguntas {
         return respostaDoUsuario == this.respostaCertaId;
     }
 
-    public void lerPergunta() {
+    public void imprimirPergunta() {
         System.out.println("------");
         System.out.println(this.pergunta);
         System.out.println(this.resposta1);
@@ -30,6 +33,20 @@ public class Perguntas {
         System.out.println(this.resposta3);
         System.out.println(this.resposta4);
         System.out.println("------");
+    }
+
+    public static void mostraPerguntasProUsuario(ArrayList<Perguntas> perguntas, Usuario usuario) {
+        Scanner teclado = new Scanner(System.in);
+        for (Perguntas perguntaTemp : perguntas) {
+            perguntaTemp.imprimirPergunta();
+            System.out.println("Sr(a) " + usuario.getNome() + " informe o número da resposta que você acha correta: ");
+            int respostaUsuario = Integer.parseInt(teclado.nextLine());
+            if (perguntaTemp.acertouRespostaDaPergunta(respostaUsuario)) {
+                usuario.acertouPergunta();
+            } else {
+                usuario.errouPergunta();
+            }
+        }
     }
 
 
