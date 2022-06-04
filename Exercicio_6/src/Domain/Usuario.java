@@ -9,8 +9,7 @@ public class Usuario {
     public void criarUsuario() {
         Scanner teclado = new Scanner(System.in);
         System.out.println("Informe seu nome: ");
-        String nomeDoUsuario = teclado.nextLine();
-        this.nome = nomeDoUsuario;
+        this.nome = teclado.nextLine();
         this.acertos = 0;
         this.erros = 0;
     }
